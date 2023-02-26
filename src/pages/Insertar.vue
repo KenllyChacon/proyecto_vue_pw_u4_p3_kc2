@@ -1,7 +1,11 @@
 <template>
   <h1>Insertar</h1>
   <input v-model="id" type="text">
-  <button @click="insertar()">Insertar</button>
+  <div class="form-floating">
+    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+    <label for="floatingTextarea">Comments</label>
+  </div>
+  <button @click="insertar()" type="button" class="btn btn-outline-primary">Primary</button>
 </template>
 
 <script>

@@ -3,7 +3,10 @@ import {createRouter, createWebHashHistory} from 'vue-router'
 
 //Carga perezosa donde se trae bajo demanda
 const routes = [
-    {path: '/', name: 'inicio', component: () => import(/* webpackChunkName: "Inicio" */ '@/pages/Inicio.vue')},
+    {
+        path: '/',
+        name: 'inicio',
+        component: () => import(/* webpackChunkName: "Inicio" */ '@/pages/Inicio.vue')},
     {
         path: '/buscar/:idCliente',
         name: 'buscar',
@@ -29,7 +32,11 @@ const routes = [
         name: '404',
         component: () => import(/* webpackChunkName: "NoFound" */ '@/pages/NoFound.vue')
     },
-    {path: '/negado', name: '403', component: () => import(/* webpackChunkName: "Negado" */ '@/pages/Negado.vue')},
+    {
+        path: '/negado',
+        name: '403',
+        component: () => import(/* webpackChunkName: "Negado" */ '@/pages/Negado.vue')
+    },
 ]
 
 const router = createRouter({
